@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Life & Adventures — Shahedul Islam Khan</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg:#030712; --navy:#0a1628; --blue:#1d4ed8; --cyan:#06b6d4;
+  --green:#10b981; --orange:#f97316; --text:#f1f5f9; --muted:#94a3b8;
+  --card:rgba(255,255,255,0.03); --border:rgba(255,255,255,0.07);
+  --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; --font-mono:'DM Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-weight:300;overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--orange);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:screen;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(249,115,22,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.3;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(3,7,18,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:1rem;color:var(--text);text-decoration:none;}
+.nav-logo span{color:var(--orange);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--orange);}
+.nav-page-links{display:flex;gap:0.75rem;}
+.nav-page-btn{font-size:0.75rem;padding:0.35rem 1rem;border-radius:2rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;transition:all 0.2s;}
+.nav-page-btn:hover,.nav-page-btn.active{border-color:var(--orange);color:var(--orange);}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 3rem 4rem;position:relative;z-index:2;text-align:center;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1.5rem;animation:fadeUp 0.6s ease both;}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,7vw,5.5rem);letter-spacing:-0.03em;line-height:1.0;margin-bottom:1.5rem;animation:fadeUp 0.6s 0.1s ease both;}
+.h1-outline{-webkit-text-stroke:1.5px rgba(255,255,255,0.2);color:transparent;}
+.h1-accent{color:var(--orange);}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:560px;margin:0 auto 2.5rem;line-height:1.8;animation:fadeUp 0.6s 0.2s ease both;}
+
+section.content{padding:6rem 3rem;position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.section-eyebrow{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:0.75rem;}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:3rem;}
+
+/* INTEREST CARDS */
+.interest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.interest-card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:2rem;transition:all 0.3s;}
+.interest-card:hover{transform:translateY(-5px);border-color:rgba(249,115,22,0.3);}
+.interest-icon{font-size:2.5rem;margin-bottom:1rem;}
+.interest-title{font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin-bottom:0.75rem;}
+.interest-desc{font-size:0.88rem;color:var(--muted);line-height:1.75;}
+
+/* FISHING GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
+.gallery-item{border-radius:0.75rem;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#0f2040,#1d4ed8);position:relative;transition:transform 0.3s;cursor:none;}
+.gallery-item:hover{transform:scale(1.03);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;}
+.gallery-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;color:rgba(6,182,212,0.4);}
+.gallery-placeholder span{font-size:2.5rem;}
+.gallery-placeholder p{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;}
+.gallery-label{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);font-size:0.8rem;color:var(--text);}
+
+/* QUORA SECTION */
+.quora-card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;transition:border-color 0.3s;}
+.quora-card:hover{border-color:rgba(185,43,39,0.4);}
+.quora-topics{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem;}
+.quora-topic{font-size:0.78rem;padding:0.3rem 0.8rem;border-radius:2rem;background:rgba(185,43,39,0.1);border:1px solid rgba(185,43,39,0.2);color:var(--text);}
+.quora-btn{display:inline-flex;align-items:center;gap:0.5rem;background:#B92B27;color:#fff;padding:0.85rem 2rem;border-radius:0.4rem;text-decoration:none;font-size:0.88rem;font-weight:500;transition:all 0.25s;white-space:nowrap;}
+.quora-btn:hover{background:#a02420;transform:translateY(-2px);}
+
+/* COMMUNITY */
+.community-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+.community-card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:1.5rem;transition:all 0.3s;border-left:3px solid var(--green);}
+.community-card:hover{transform:translateX(4px);border-left-color:var(--orange);}
+.comm-icon{font-size:1.5rem;margin-bottom:0.75rem;}
+.comm-title{font-family:var(--font-display);font-weight:700;font-size:0.92rem;margin-bottom:0.5rem;}
+.comm-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;}
+
+/* TRAVEL */
+.travel-marquee-wrap{overflow:hidden;position:relative;}
+.travel-marquee{display:flex;gap:1rem;animation:marquee 20s linear infinite;}
+.travel-chip{flex-shrink:0;background:var(--card);border:1px solid var(--border);border-radius:2rem;padding:0.5rem 1.25rem;font-size:0.82rem;color:var(--muted);white-space:nowrap;}
+.travel-chip span{margin-right:0.4rem;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+footer{text-align:center;padding:2rem 3rem;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);position:relative;z-index:2;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  section.content{padding:4rem 1.5rem;}
+  .quora-card{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">S<span>.</span>Khan</a>
+  <ul class="nav-links">
+    <li><a href="#interests">Interests</a></li>
+    <li><a href="#fishing">Fishing</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#writing">Writing</a></li>
+  </ul>
+  <div class="nav-page-links">
+    <a href="index.html" class="nav-page-btn">Professional</a>
+    <a href="life.html" class="nav-page-btn active">Life</a>
+    <a href="research.html" class="nav-page-btn">Research</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">// beyond the code</div>
+    <h1>Life <span class="h1-outline">&</span><br><span class="h1-accent">Adventures</span></h1>
+    <p class="hero-sub">Researcher by day, adventurer by heart. Fishing, travelling, building community, and writing about it all.</p>
+  </div>
+</section>
+
+<!-- INTERESTS -->
+<section class="content" id="interests">
+  <div class="reveal">
+    <div class="section-eyebrow">// what drives me</div>
+    <h2 class="section-title">Beyond the lab.</h2>
+    <div class="interest-grid">
+      <div class="interest-card">
+        <div class="interest-icon">🎣</div>
+        <div class="interest-title">Fishing</div>
+        <div class="interest-desc">An avid angler with a collection of fishing photos to prove it. There's something meditative about the patience fishing demands — not unlike debugging a model at 2am.</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🌍</div>
+        <div class="interest-title">Travel & Adventure</div>
+        <div class="interest-desc">An adventurous soul who's called Bangladesh, China, and Australia home. Always seeking new experiences, cultures, and perspectives — the world is too big to stay still.</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">🤝</div>
+        <div class="interest-title">Community</div>
+        <div class="interest-desc">Active in local volunteering, sports, and organising events for the Bangladeshi community in Newcastle. Believe in giving back and bringing people together.</div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">✍️</div>
+        <div class="interest-title">Writing on Quora</div>
+        <div class="interest-desc">Sharing experiences about life as a student in China and now Australia — the culture, the challenges, and the growth that comes with living far from home.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FISHING GALLERY -->
+<section class="content" id="fishing">
+  <div class="reveal">
+    <div class="section-eyebrow">// reel life</div>
+    <h2 class="section-title">On the water. 🎣</h2>
+    <p style="color:var(--muted);margin-bottom:2rem;font-size:0.9rem;">Drop your fishing photos named <code style="color:var(--cyan);background:rgba(6,182,212,0.1);padding:0.1rem 0.4rem;border-radius:0.25rem;">fish1.jpg, fish2.jpg...</code> in the same folder to make this gallery come alive.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="fish1.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🎣</span><p>Your photo here</p></div>'"/><div class="gallery-label">Adventures on the water</div></div>
+      <div class="gallery-item"><img src="fish2.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🐟</span><p>fish2.jpg</p></div>'"/></div>
+      <div class="gallery-item"><img src="fish3.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🎣</span><p>fish3.jpg</p></div>'"/></div>
+      <div class="gallery-item"><img src="fish4.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🐟</span><p>fish4.jpg</p></div>'"/></div>
+      <div class="gallery-item"><img src="fish5.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🎣</span><p>fish5.jpg</p></div>'"/></div>
+      <div class="gallery-item"><img src="fish6.jpg" alt="Fishing" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder><span>🐟</span><p>fish6.jpg</p></div>'"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL -->
+<section class="content" id="travel">
+  <div class="reveal">
+    <div class="section-eyebrow">// places & journeys</div>
+    <h2 class="section-title">An explorer at heart. 🌍</h2>
+    <p style="color:var(--muted);margin-bottom:2.5rem;font-size:0.95rem;line-height:1.8;max-width:680px;">From the streets of Dhaka to the ancient city of Xi'an, and now the coastal city of Newcastle — a life lived across continents. Always chasing the next adventure, new cultures, and stories worth telling.</p>
+    <div class="travel-marquee-wrap">
+      <div class="travel-marquee">
+        <div class="travel-chip"><span>🇧🇩</span> Bangladesh</div>
+        <div class="travel-chip"><span>🇨🇳</span> China</div>
+        <div class="travel-chip"><span>🇦🇺</span> Australia</div>
+        <div class="travel-chip"><span>🏙️</span> Xi'an</div>
+        <div class="travel-chip"><span>🌊</span> Newcastle</div>
+        <div class="travel-chip"><span>🏝️</span> New Adventures</div>
+        <div class="travel-chip"><span>🗺️</span> Always Exploring</div>
+        <div class="travel-chip"><span>✈️</span> Next Destination TBD</div>
+        <!-- duplicate for seamless loop -->
+        <div class="travel-chip"><span>🇧🇩</span> Bangladesh</div>
+        <div class="travel-chip"><span>🇨🇳</span> China</div>
+        <div class="travel-chip"><span>🇦🇺</span> Australia</div>
+        <div class="travel-chip"><span>🏙️</span> Xi'an</div>
+        <div class="travel-chip"><span>🌊</span> Newcastle</div>
+        <div class="travel-chip"><span>🏝️</span> New Adventures</div>
+        <div class="travel-chip"><span>🗺️</span> Always Exploring</div>
+        <div class="travel-chip"><span>✈️</span> Next Destination TBD</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="content" id="community">
+  <div class="reveal">
+    <div class="section-eyebrow">// giving back</div>
+    <h2 class="section-title">Community & people. 🤝</h2>
+    <div class="community-grid">
+      <div class="community-card">
+        <div class="comm-icon">🇧🇩</div>
+        <div class="comm-title">Bangladeshi Community Events</div>
+        <div class="comm-desc">Organising and participating in cultural events for the Bangladeshi community in Newcastle — keeping culture alive far from home.</div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon">🏃</div>
+        <div class="comm-title">Sports & Recreation</div>
+        <div class="comm-desc">Active participant in local sports. Believes team sports build as much character as any classroom.</div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon">🙌</div>
+        <div class="comm-title">Local Volunteering</div>
+        <div class="comm-desc">Volunteering locally in Newcastle — from community events to student support. A continuation of the spirit from his time as Vice Director of the Volunteer Centre at NWPU.</div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon">🏆</div>
+        <div class="comm-title">Hult Prize — Campus Director</div>
+        <div class="comm-desc">Served as Campus Director for the Hult Prize Foundation (2020–2021), leading student social entrepreneurship at NWPU.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUORA / WRITING -->
+<section class="content" id="writing">
+  <div class="reveal">
+    <div class="section-eyebrow">// words & stories</div>
+    <h2 class="section-title">Writing on Quora. ✍️</h2>
+    <div class="quora-card">
+      <div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.8;max-width:580px;">Sharing honest, first-hand accounts of life as an international student — from navigating university in China to building a new life in Australia. Real stories, real experiences, no filter.</p>
+        <div class="quora-topics">
+          <span class="quora-topic">🎓 Education in China</span>
+          <span class="quora-topic">🇨🇳 Life as an International Student</span>
+          <span class="quora-topic">🇦🇺 Life in Australia</span>
+          <span class="quora-topic">🌏 Cross-cultural Experiences</span>
+        </div>
+      </div>
+      <a href="https://www.quora.com/profile/Mohammad-Shahedul-Islam-Khan" target="_blank" class="quora-btn">Read on Quora →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Md Shahedul Islam Khan · <a href="index.html" style="color:var(--cyan);text-decoration:none;">Back to Professional</a> · mdshahedulislamkhan.com</p>
+</footer>
+
+<script>
+// Particle bg (warmer, travel vibe)
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize(); window.addEventListener('resize',resize);
+const stars=Array.from({length:120},()=>({x:Math.random()*1920,y:Math.random()*1080,r:Math.random()*1.5+0.3,o:Math.random(),v:Math.random()*0.003+0.001}));
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{
+    s.o+=s.v; if(s.o>1||s.o<0)s.v*=-1;
+    ctx.beginPath(); ctx.arc(s.x%W,s.y%H,s.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(249,115,22,${s.o*0.5})`; ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Cursor
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function a(){cursor.style.transform=`translate(${mx-4}px,${my-4}px)`;rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.transform=`translate(${rx-16}px,${ry-16}px)`;requestAnimationFrame(a);})();
+
+// Reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>

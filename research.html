@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Research — Shahedul Islam Khan</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#030712;--navy:#0a1628;--blue:#1d4ed8;--cyan:#06b6d4;
+  --purple:#7c3aed;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;
+  --card:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);
+  --font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-weight:300;overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--purple);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:screen;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(124,58,237,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.4;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(3,7,18,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:1rem;color:var(--text);text-decoration:none;}
+.nav-logo span{color:var(--purple);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--purple);}
+.nav-page-links{display:flex;gap:0.75rem;}
+.nav-page-btn{font-size:0.75rem;padding:0.35rem 1rem;border-radius:2rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;transition:all 0.2s;}
+.nav-page-btn:hover,.nav-page-btn.active{border-color:var(--purple);color:var(--purple);}
+
+/* HERO */
+#hero{min-height:80vh;display:flex;align-items:center;padding:8rem 3rem 4rem;position:relative;z-index:2;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);margin-bottom:1.5rem;animation:fadeUp 0.6s ease both;}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2.8rem,6vw,5rem);letter-spacing:-0.03em;line-height:1.02;margin-bottom:1.5rem;animation:fadeUp 0.6s 0.1s ease both;}
+.h1-accent{color:var(--purple);}
+.h1-outline{-webkit-text-stroke:1.5px rgba(255,255,255,0.2);color:transparent;}
+.hero-desc{font-size:1rem;color:var(--muted);max-width:580px;line-height:1.8;animation:fadeUp 0.6s 0.2s ease both;}
+
+section.content{padding:5rem 3rem;position:relative;z-index:2;max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);margin-bottom:0.75rem;}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.4rem);letter-spacing:-0.02em;line-height:1.15;margin-bottom:2.5rem;}
+
+/* CURRENT RESEARCH */
+.research-card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:2.5rem;border-top:3px solid var(--purple);transition:all 0.3s;margin-bottom:1.5rem;}
+.research-card:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+.research-status{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);padding:0.3rem 0.8rem;border-radius:2rem;margin-bottom:1.25rem;}
+.status-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;}
+.research-title{font-family:var(--font-display);font-weight:700;font-size:1.2rem;margin-bottom:1rem;line-height:1.3;}
+.research-desc{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;}
+.research-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.research-tag{font-size:0.75rem;padding:0.25rem 0.75rem;border-radius:2rem;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);color:var(--text);}
+
+/* PHASE TRACKER */
+.phase-track{display:grid;grid-template-columns:repeat(5,1fr);gap:0.75rem;margin-top:2rem;}
+.phase{background:var(--card);border:1px solid var(--border);border-radius:0.5rem;padding:1rem;text-align:center;position:relative;}
+.phase.done{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.05);}
+.phase.active{border-color:rgba(6,182,212,0.4);background:rgba(6,182,212,0.05);}
+.phase-num{font-family:var(--font-display);font-weight:800;font-size:1.5rem;color:var(--muted);margin-bottom:0.3rem;}
+.phase.done .phase-num{color:var(--green);}
+.phase.active .phase-num{color:var(--cyan);}
+.phase-label{font-size:0.68rem;color:var(--muted);line-height:1.4;}
+.phase-badge{font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2rem;margin-top:0.5rem;display:inline-block;}
+.phase.done .phase-badge{background:rgba(16,185,129,0.15);color:var(--green);}
+.phase.active .phase-badge{background:rgba(6,182,212,0.15);color:var(--cyan);}
+
+/* PUBLICATIONS */
+.pub-card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:2rem;margin-bottom:1.25rem;transition:all 0.3s;}
+.pub-card:hover{border-color:rgba(124,58,237,0.3);transform:translateX(4px);}
+.pub-venue{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple);margin-bottom:0.6rem;}
+.pub-title{font-family:var(--font-display);font-weight:700;font-size:1rem;line-height:1.4;margin-bottom:0.75rem;}
+.pub-authors{font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;}
+.pub-link{font-family:var(--font-mono);font-size:0.72rem;color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(6,182,212,0.3);padding-bottom:0.1rem;transition:border-color 0.2s;}
+.pub-link:hover{border-color:var(--cyan);}
+
+/* INTERESTS */
+.interest-pills{display:flex;flex-wrap:wrap;gap:0.75rem;}
+.interest-pill{background:var(--card);border:1px solid var(--border);border-radius:0.5rem;padding:1rem 1.5rem;transition:all 0.3s;}
+.interest-pill:hover{border-color:rgba(124,58,237,0.3);transform:translateY(-2px);}
+.pill-icon{font-size:1.5rem;margin-bottom:0.5rem;}
+.pill-label{font-family:var(--font-display);font-weight:600;font-size:0.88rem;}
+.pill-sub{font-size:0.75rem;color:var(--muted);margin-top:0.2rem;}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:0.5rem;padding:1.25rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.3s;}
+.cert-card:hover{border-color:rgba(124,58,237,0.3);}
+.cert-icon{font-size:1.5rem;flex-shrink:0;}
+.cert-name{font-weight:500;font-size:0.88rem;margin-bottom:0.2rem;}
+.cert-meta{font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);}
+
+footer{text-align:center;padding:2rem 3rem;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);position:relative;z-index:2;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem;} .nav-links{display:none;}
+  section.content{padding:4rem 1.5rem;}
+  .phase-track{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">S<span>.</span>Khan</a>
+  <ul class="nav-links">
+    <li><a href="#current">Current</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#interests">Interests</a></li>
+  </ul>
+  <div class="nav-page-links">
+    <a href="index.html" class="nav-page-btn">Professional</a>
+    <a href="life.html" class="nav-page-btn">Life</a>
+    <a href="research.html" class="nav-page-btn active">Research</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">// research deep dive</div>
+    <h1>Where <span class="h1-outline">science</span><br>meets <span class="h1-accent">impact.</span></h1>
+    <p class="hero-desc">Focused on building ML systems that are not only powerful but fair, explainable, and grounded in real-world data. From NLP pipelines to computer vision — research with purpose.</p>
+  </div>
+</section>
+
+<!-- CURRENT RESEARCH -->
+<section class="content" id="current">
+  <div class="reveal">
+    <div class="section-eyebrow">// active research</div>
+    <h2 class="section-title">Current work.</h2>
+
+    <div class="research-card">
+      <div class="research-status"><div class="status-dot"></div> In Progress</div>
+      <div class="research-title">Bias Detection & Mitigation in Clinical Healthcare Text</div>
+      <div class="research-desc">Developing a multi-layer framework for detecting and mitigating implicit and explicit bias in clinical discharge notes using transformer-based NLP models. The system spans corpus construction, supervised classification, explainability auditing, and bias-aware mitigation — designed to improve fairness in AI-assisted clinical decision-making.</div>
+      <div class="research-tags">
+        <span class="research-tag">BERT-family Models</span>
+        <span class="research-tag">LLMs</span>
+        <span class="research-tag">Fairness in AI</span>
+        <span class="research-tag">Explainability</span>
+        <span class="research-tag">Healthcare NLP</span>
+        <span class="research-tag">Corpus Construction</span>
+        <span class="research-tag">Statistical Validation</span>
+      </div>
+
+      <div class="phase-track" style="margin-top:2rem;">
+        <div class="phase done">
+          <div class="phase-num">01</div>
+          <div class="phase-label">Dataset Construction</div>
+          <div class="phase-badge">Complete ✓</div>
+        </div>
+        <div class="phase active">
+          <div class="phase-num">02</div>
+          <div class="phase-label">Human Annotation</div>
+          <div class="phase-badge">In Progress</div>
+        </div>
+        <div class="phase">
+          <div class="phase-num">03</div>
+          <div class="phase-label">Model Training</div>
+          <div class="phase-badge" style="background:rgba(148,163,184,0.1);color:var(--muted);">Upcoming</div>
+        </div>
+        <div class="phase">
+          <div class="phase-num">04</div>
+          <div class="phase-label">Explainability & Mitigation</div>
+          <div class="phase-badge" style="background:rgba(148,163,184,0.1);color:var(--muted);">Upcoming</div>
+        </div>
+        <div class="phase">
+          <div class="phase-num">05</div>
+          <div class="phase-label">Evaluation & Publication</div>
+          <div class="phase-badge" style="background:rgba(148,163,184,0.1);color:var(--muted);">Upcoming</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="content" id="publications">
+  <div class="reveal">
+    <div class="section-eyebrow">// published work</div>
+    <h2 class="section-title">Publications.</h2>
+
+    <div class="pub-card">
+      <div class="pub-venue">arXiv 2024 · Computer Science — Cryptography & Security</div>
+      <div class="pub-title">A Data-Driven Predictive Analysis on Cyber Security Threats with Key Risk Factors</div>
+      <div class="pub-authors">Fatama Tuz Johora, Md Shahedul Islam Khan, Esrath Kanon, Mohammad Abu Tareq Rony, Md Zubair, Iqbal H. Sarker</div>
+      <a href="https://arxiv.org/abs/2404.00068" target="_blank" class="pub-link">arxiv.org/abs/2404.00068 →</a>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-venue">ICIC 2022 · Springer · Pages 170–182</div>
+      <div class="pub-title">An Effective Chinese Text Classification Method with Contextualized Weak Supervision for Review Autograding</div>
+      <div class="pub-authors">Yupei Zhang, Md Shahedul Islam Khan, Yaya Zhou, Min Xiao, Xuequn Shang · International Conference on Intelligent Computing</div>
+      <span class="pub-link" style="cursor:default;">Springer LNCS Proceedings</span>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH INTERESTS -->
+<section class="content" id="interests">
+  <div class="reveal">
+    <div class="section-eyebrow">// research interests</div>
+    <h2 class="section-title">What I care about.</h2>
+    <div class="interest-pills">
+      <div class="interest-pill"><div class="pill-icon">🧠</div><div class="pill-label">Natural Language Processing</div><div class="pill-sub">Text classification, transformers, LLMs</div></div>
+      <div class="interest-pill"><div class="pill-icon">👁️</div><div class="pill-label">Computer Vision</div><div class="pill-sub">Object detection, image translation</div></div>
+      <div class="interest-pill"><div class="pill-icon">⚖️</div><div class="pill-label">Fairness in AI</div><div class="pill-sub">Bias detection, equitable ML systems</div></div>
+      <div class="interest-pill"><div class="pill-icon">🔍</div><div class="pill-label">Explainable AI</div><div class="pill-sub">Model interpretability, auditing</div></div>
+      <div class="interest-pill"><div class="pill-icon">🔐</div><div class="pill-label">Cybersecurity + ML</div><div class="pill-sub">Threat analysis, OSINT, social engineering</div></div>
+      <div class="interest-pill"><div class="pill-icon">🏥</div><div class="pill-label">Healthcare AI</div><div class="pill-sub">Clinical text, medical NLP</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="content">
+  <div class="reveal">
+    <div class="section-eyebrow">// certifications</div>
+    <h2 class="section-title">Credentials.</h2>
+    <div class="cert-grid">
+      <div class="cert-card"><div class="cert-icon">🧠</div><div><div class="cert-name">A Deep Understanding of Deep Learning</div><div class="cert-meta">Udemy · Feb 2022</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🔬</div><div><div class="cert-name">The Complete Neural Network Bootcamp</div><div class="cert-meta">Udemy · Feb 2022</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🔐</div><div><div class="cert-name">CompTIA Network+ (N10-008)</div><div class="cert-meta">Udemy · Jan 2024</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Md Shahedul Islam Khan · <a href="index.html" style="color:var(--cyan);text-decoration:none;">Back to Home</a> · mdshahedulislamkhan.com</p>
+</footer>
+
+<script>
+// DNA helix / research vibe bg
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize(); window.addEventListener('resize',resize);
+let t=0;
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  t+=0.005;
+  for(let i=0;i<6;i++){
+    const x=W*0.1+i*(W*0.16);
+    for(let j=0;j<60;j++){
+      const y=j*(H/60);
+      const wave=Math.sin(y*0.05+t+i)*40;
+      const alpha=0.15+0.1*Math.sin(y*0.1+t);
+      ctx.beginPath();
+      ctx.arc(x+wave,y,2,0,Math.PI*2);
+      ctx.fillStyle=`rgba(124,58,237,${alpha})`;
+      ctx.fill();
+      if(j%5===0){
+        ctx.beginPath();
+        ctx.moveTo(x+wave,y);
+        ctx.lineTo(x-wave+W*0.08,y);
+        ctx.strokeStyle=`rgba(124,58,237,${alpha*0.5})`;
+        ctx.lineWidth=0.5; ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function a(){cursor.style.transform=`translate(${mx-4}px,${my-4}px)`;rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.transform=`translate(${rx-16}px,${ry-16}px)`;requestAnimationFrame(a);})();
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
