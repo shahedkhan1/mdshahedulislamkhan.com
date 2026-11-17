@@ -49,3 +49,4 @@
 - Merged the products heading and subtitle into one line: 'Delivered at the University of Newcastle' (subtitle removed).
 - Skills section: slash-separated lists replaced with outlined pills (same style as card tech tags).
 - Products heading restored to the short one-line 'Delivered products' (long version wrapped onto several lines in the heading column); who uses each product is stated on the cards.
+- Section heading column widened to 230px with no-wrap so 'Delivered products' stays on one line on desktop.

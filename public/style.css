@@ -30,8 +30,8 @@ a{color:inherit}
 
 /* layout */
 main{max-width:1080px;margin:0 auto;padding:0 32px}
-section{display:grid;grid-template-columns:190px minmax(0,1fr);gap:0 48px;padding:72px 0 0}
-section>h2{grid-column:1;margin:0;font:700 22px/1.2 var(--display);letter-spacing:-.01em;position:sticky;top:84px;align-self:start}
+section{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 48px;padding:72px 0 0}
+section>h2{grid-column:1;margin:0;font:700 22px/1.2 var(--display);letter-spacing:-.01em;white-space:nowrap;position:sticky;top:84px;align-self:start}
 section>*:not(h2){grid-column:2}
 section>h2 span{display:none}
 .hero{display:block;padding:88px 0 0}
