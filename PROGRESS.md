@@ -27,3 +27,9 @@
 - Monthly Anthropic spend limit lowered from $200,000 to $5.
 - Chatbot re-tested after both changes: working.
 - Remaining: Namecheap 2FA, let hosting lapse, transfer registration to Cloudflare before 14 Apr 2027, resume/Open Graph, then LinkedIn.
+
+## 2026-11-17 (redesign, on branch `redesign`, NOT merged to main)
+- Redesign built on branch `redesign`; preview: https://redesign.mdshahedulislamkhan-com.pages.dev (chat shows an error there only because the API key secret is set for Production, not Preview).
+- Look: harbour blue / salt grey / hazard-yellow accent; Bricolage Grotesque + Source Serif 4; ruled entries instead of boxed cards; sticky section headings; auto dark mode.
+- Decisions: hero "ask my assistant" box tried and removed (owner: doesn't fit); floating chat button kept. New "Products" section (Ticket Matcher, Ticket Matcher in ZoomMate, Guarded Browser Assistant) placed before Experience; other work under "Other projects". data.json projects now have a `kind` field.
+- Next: owner reviews preview; then merge `redesign` to `main` (deploys live).
