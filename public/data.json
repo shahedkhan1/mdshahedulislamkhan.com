@@ -14,8 +14,8 @@
     },
     "focus": [
       "Cybersecurity",
+      "Natural language processing",
       "Applied AI & LLMs",
-      "Clinical NLP & bias detection",
       "Data engineering"
     ],
     "resume": "shahed_resume.pdf",
@@ -306,7 +306,7 @@
     "cta": "Every solution is designed and configured to suit the client's specific environment."
   },
   "research": {
-    "intro": "Applied research at the intersection of natural language processing, clinical text and security: building models that are rigorously evaluated rather than merely trained.",
+    "intro": "Applied research in natural language processing, security and machine learning: building models that are rigorously evaluated rather than merely trained.",
     "current": {
       "title": "Clinical Bias Detection in Discharge Summaries",
       "status": "Completed · under peer review",
@@ -339,11 +339,11 @@
     "interests": [
       {
         "title": "Natural language processing",
-        "desc": "Transformers, LLMs, text classification"
+        "desc": "Transformers, LLMs, text classification, retrieval and semantic search"
       },
       {
-        "title": "Clinical NLP and bias",
-        "desc": "Bias detection and mitigation in clinical text"
+        "title": "Applied NLP in healthcare and service operations",
+        "desc": "Clinical text analysis, bias detection and ticket retrieval"
       },
       {
         "title": "Cybersecurity and ML",
