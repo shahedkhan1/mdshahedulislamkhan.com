@@ -46,3 +46,4 @@
 - Toned down the commercial feel: yellow status pills replaced by a quiet navy left-rule label; skill chips underline neutral. Yellow now only on hover and keyboard focus. Merge held pending owner's view.
 - Status labels shortened (the section heading already says Delivered): 'Used by the IT service desk' / 'Used across DTS'.
 - Checked preview at 500px and 820px widths (no overflow, readable). Shortened the Delivered products subtitle to one line on phones: 'In use at the University of Newcastle.'
+- Merged the products heading and subtitle into one line: 'Delivered at the University of Newcastle' (subtitle removed).
