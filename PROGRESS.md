@@ -48,3 +48,4 @@
 - Checked preview at 500px and 820px widths (no overflow, readable). Shortened the Delivered products subtitle to one line on phones: 'In use at the University of Newcastle.'
 - Merged the products heading and subtitle into one line: 'Delivered at the University of Newcastle' (subtitle removed).
 - Skills section: slash-separated lists replaced with outlined pills (same style as card tech tags).
+- Products heading restored to the short one-line 'Delivered products' (long version wrapped onto several lines in the heading column); who uses each product is stated on the cards.
