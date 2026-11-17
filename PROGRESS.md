@@ -73,3 +73,5 @@
 - LinkedIn: the four delivered products now sit in the CSO role description (title kept as 'CSO' at Shahed's choice, not 'Client Support Officer'). Featured 'Portfolio' card exists but shows a broken thumbnail (site has no Open Graph image). A Featured link to #products could not be previewed by LinkedIn. Projects section unchanged.
 - Site: added Open Graph tags and public/og.png (fixes the broken LinkedIn Featured thumbnail); page titles and meta description now use the full name and drop 'clinical-AI researcher'.
 - Site: new public/products.html (Delivered products page with its own preview image) plus Open Graph tags on research and services pages, so LinkedIn Featured cards can preview them.
+
+- 2026-11-17: Ticket Matcher status corrected to "under review for deployment" (site data and chatbot knowledge); Deskmate, Guarded Browser Assistant and ZoomMate Side Panel remain "in use". LinkedIn: NBC Executive Committee Member added as top Volunteering entry; the four products added to Projects.

@@ -77,7 +77,7 @@
   "projects": [
     {
       "title": "Ticket Matcher",
-      "tag": "AI · IT service desk · Completed",
+      "tag": "AI · IT service desk · Under review for deployment",
       "desc": "A decision-support tool for IT service desk tickets. It recommends the next action and presents the resolved tickets on which the recommendation is based.",
       "stack": [
         "Python",
@@ -93,7 +93,7 @@
       ],
       "linkLabel": "",
       "kind": "product",
-      "status": "Used by the IT service desk, University of Newcastle"
+      "status": "Under review for deployment, University of Newcastle IT service desk"
     },
     {
       "title": "Guarded Browser Assistant",
