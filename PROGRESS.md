@@ -50,3 +50,4 @@
 - Skills section: slash-separated lists replaced with outlined pills (same style as card tech tags).
 - Products heading restored to the short one-line 'Delivered products' (long version wrapped onto several lines in the heading column); who uses each product is stated on the cards.
 - Section heading column widened to 230px with no-wrap so 'Delivered products' stays on one line on desktop.
+- Product status labels now name where each is used in full, no 'DTS' abbreviation: 'Used by the IT service desk, University of Newcastle' / 'Used across Digital Technology Solutions, University of Newcastle'. Heading stays 'Delivered products'.
