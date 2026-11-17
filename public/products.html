@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivered products — Md Shahedul Islam Khan</title>
+<meta name="description" content="Tools designed, built and delivered for the IT service desk and Digital Technology Solutions at the University of Newcastle.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Delivered products — Md Shahedul Islam Khan">
+<meta property="og:description" content="Tools designed, built and delivered for the IT service desk and Digital Technology Solutions at the University of Newcastle.">
+<meta property="og:url" content="https://mdshahedulislamkhan.com/products.html">
+<meta property="og:image" content="https://mdshahedulislamkhan.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Md Shahedul Islam Khan">SK<span>_</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="services.html">Services</a>
+    <a href="shahed_resume.pdf">Resume</a>
+  </nav>
+  <a class="btn primary nav-cta" href="index.html#contact">Get in touch</a>
+</header>
+<main>
+  <section class="hero">
+    
+    <h1>Delivered products</h1>
+    <p class="tagline">Tools designed, built and delivered at the University of Newcastle.</p>
+  </section>
+  <section><h2>Products</h2><div class="grid" id="productGrid"></div></section>
+</main>
+<footer><span id="year"></span> &nbsp; <a href="index.html">Back to home</a></footer>
+<script>
+const $=(i)=>document.getElementById(i);
+const esc=(s)=>String(s??"").replace(/[&<>"]/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("data.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+  $("year").textContent="© "+new Date().getFullYear()+" "+d.profile.name;
+  d.projects.filter(pr=>pr.kind==="product").forEach(pr=>{
+    const c=document.createElement("article");c.className="card";
+    c.innerHTML=`${pr.status?`<span class="status">${esc(pr.status)}</span>`:""}<span class="k">${esc(pr.tag)}</span><h3>${esc(pr.title)}</h3><p>${esc(pr.desc)}</p><ul class="hl">${(pr.highlights||[]).map(h=>`<li>${esc(h)}</li>`).join("")}</ul><div class="stack">${pr.stack.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div>`;
+    $("productGrid").append(c);
+  });
+});
+</script>
+<script src="chat.js"></script>
+</body>
+</html>
