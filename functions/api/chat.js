@@ -75,7 +75,12 @@ export async function onRequestPost({ request, env }) {
   } catch {
     return json(502, { detail: "Assistant unavailable." });
   }
-  if (!r.ok) return json(502, { detail: "Assistant unavailable." });
+  if (!r.ok) {
+    let err = "";
+    try { const e = await r.json(); err = (e.error && e.error.type) || ""; } catch {}
+    console.log("anthropic error", r.status, err);
+    return json(502, { detail: "Assistant unavailable.", code: r.status, type: err });
+  }
 
   const data = await r.json();
   const reply = (data.content || []).filter((c) => c.type === "text").map((c) => c.text).join("").trim();
