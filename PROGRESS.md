@@ -88,3 +88,9 @@
 - Skipped with reasons: Smith Family (external account), PRA (senior), TEKsystems and Stella (citizenship/clearance), Blueshift (needs owner's breakfast line and transcript), Maverick (2-4 yrs testing), PRP (healthcare admin), KPay (vehicle, 8 hrs/wk), GWG Data Quality (weak fit).
 - LinkedIn is signed in on the built-in browser only (Chrome shows authwall). Regional Easy Apply results were thin.
 - Next: owner to decide on Blueshift; upload resume to Indeed; Indeed job search not yet done.
+
+## 2026-11-18 (early) - Regional NSW applications, second pass
+- Applied on SEEK: Service Desk Officer (Wirrigan, Wollongong, 6-mo contract); Software Engineer LIMS & IT Systems (Westgate Labs, Orange). Total this session: 4 (with Brennan, Empowered Vision).
+- Needs owner: Maitland City Council Junior Full Stack Developer (own portal, closes 22 Nov); Blueshift (breakfast line + transcript).
+- Searched Newcastle, Maitland, Central Coast, Wollongong, Nowra, Orange, Bathurst, Dubbo, Tamworth, Armidale, Port Macquarie, Coffs, Lismore, Wagga, Albury, Goulburn. Details in /home/claude/applications/log.md (not in git).
+- Not done: Indeed applications and resume upload; LinkedIn Easy Apply found no regional matches.
