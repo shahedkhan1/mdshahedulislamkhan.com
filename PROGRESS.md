@@ -43,3 +43,4 @@
 - Formal-register pass over the whole site (owner: "formal language makes the whole website formal"): tagline, all product and project cards, experience points, services page, research intro and contact line rewritten in a formal register. Facts unchanged.
 - Broadened research tags: focus and interests now lead with Natural language processing (clinical bias is one application among several, alongside Ticket Matcher and the Chinese text classification paper).
 - Focus tags merged to three: Cybersecurity, Applied NLP & LLMs, Data engineering (avoids duplicating Applied AI & LLMs).
+- Toned down the commercial feel: yellow status pills replaced by a quiet navy left-rule label; skill chips underline neutral. Yellow now only on hover and keyboard focus. Merge held pending owner's view.
