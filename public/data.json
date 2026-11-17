@@ -271,11 +271,8 @@
       "Bash",
       "LaTeX"
     ],
-    "Automation": [
-      "Browser extensions (Manifest V3)",
-      "Browser automation"
-    ],
-    "DevOps": [
+    "Automation & DevOps": [
+      "Browser extensions & automation (Manifest V3)",
       "GitHub Actions",
       "Docker",
       "Linux",

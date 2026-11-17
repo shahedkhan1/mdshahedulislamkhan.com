@@ -66,3 +66,4 @@
 - Skills: ETL/ELT and Power BI removed from the site, resume and chatbot skills line. New 'Data engineering' group (data preparation & cleaning, text pre-processing for NLP, dataset construction & sampling, web scraping) and 'Cloud & big data' (AWS, Apache Spark). Resume summary mentions NLP data preparation. Chatbot KB: QLoRA skill wording generalised.
 - Data engineering skills: merged the overlapping 'preparation & cleaning' and 'text pre-processing' into 'Data cleaning & pre-processing for NLP' (site, resume, chatbot KB).
 - Data engineering skills final: Data cleaning & pre-processing for NLP; Dataset construction & sampling; Data modelling (web scraping dropped: one-off use, already covered by OSINT).
+- Skills: Automation group merged into 'Automation & DevOps' with the single item 'Browser extensions & automation (Manifest V3)' (site and resume).
