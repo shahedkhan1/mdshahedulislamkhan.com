@@ -17,7 +17,7 @@ a{color:inherit}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 
 /* header */
-.nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px 32px;
+.nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px max(32px,calc((100% - 1360px)/2 + 32px));
   background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .brand{font:700 20px var(--display);letter-spacing:-.01em;text-decoration:none;margin-right:auto}
 .nav nav{display:flex;gap:26px}
@@ -29,7 +29,7 @@ a{color:inherit}
 .btn.primary:hover{background:var(--signal);border-color:var(--signal);color:#0C1B26}
 
 /* layout */
-main{max-width:1080px;margin:0 auto;padding:0 32px}
+main{max-width:1360px;margin:0 auto;padding:0 32px}
 section{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 48px;padding:72px 0 0}
 section>h2{grid-column:1;margin:0;font:700 22px/1.2 var(--display);letter-spacing:-.01em;white-space:nowrap;position:sticky;top:84px;align-self:start}
 section>*:not(h2){grid-column:2}
@@ -92,7 +92,7 @@ h1{font:800 clamp(44px,8.4vw,104px)/.95 var(--display);letter-spacing:-.035em;ma
 .mail:hover{background:var(--signal);color:#0C1B26;text-decoration:none}
 #contact .tagline{margin-bottom:18px}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-footer{max-width:1080px;margin:96px auto 0;padding:24px 32px 40px;border-top:1px solid var(--line);color:var(--mute);font:500 14px var(--display)}
+footer{max-width:1360px;margin:96px auto 0;padding:24px 32px 40px;border-top:1px solid var(--line);color:var(--mute);font:500 14px var(--display)}
 
 /* chat widget retheme (widget CSS is injected by chat.js) */
 body .skc-btn{background:var(--block);color:#fff;border-color:var(--block);box-shadow:0 6px 20px rgba(12,27,38,.28)}

@@ -51,3 +51,4 @@
 - Products heading restored to the short one-line 'Delivered products' (long version wrapped onto several lines in the heading column); who uses each product is stated on the cards.
 - Section heading column widened to 230px with no-wrap so 'Delivered products' stays on one line on desktop.
 - Product status labels now name where each is used in full, no 'DTS' abbreviation: 'Used by the IT service desk, University of Newcastle' / 'Used across Digital Technology Solutions, University of Newcastle'. Heading stays 'Delivered products'.
+- Desktop width: main/footer max-width raised from 1080px to 1360px and the nav aligned to the same edges (less empty margin on full-size monitors).
