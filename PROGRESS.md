@@ -76,3 +76,9 @@
 
 - 2026-11-17: Ticket Matcher status corrected to "under review for deployment" (site data and chatbot knowledge); Deskmate, Guarded Browser Assistant and ZoomMate Side Panel remain "in use". LinkedIn: NBC Executive Committee Member added as top Volunteering entry; the four products added to Projects.
 - 2026-11-17 (evening): Job title shown as 'CSO' (not 'Client Support Officer') in the site data, chatbot knowledge and the resume PDF, matching LinkedIn and SEEK. In the resume, Ticket Matcher is now labelled 'Under review for deployment' (it is not yet in use). SEEK profile updated: CSO role, Apurbo removed, new summary, skills, languages, NPU role, Research Assistant dated Apr 2026; new resume uploaded. First application sent: Brennan Service Desk Analyst. Skipped as not honestly fitting or needing details only Shahed can give: Junior IT Support Officer (driver's licence), Data Quality Analyst (external portal). Indeed profile still to build.
+
+## 2026-11-17 (late) - Indeed profile finished, job search results
+- Indeed profile built (details, three roles, education, skills, links); job preferences left blank on purpose. No resume file uploaded to Indeed yet.
+- SEEK: one application submitted (Brennan, Service Desk Analyst). Reviewed Smith Family AI Solutions Engineer (external portal, needs account), PRA AI Engineer (senior), TEKsystems desktop (citizenship + NV1), Empowered Vision Junior IT Support (needs driver's licence answer). None applied.
+- Base cover letter rewritten with accurate wording (CSO, Ticket Matcher under review).
+- Next: owner to confirm driver's licence; apply to further honest matches; upload resume to Indeed.
