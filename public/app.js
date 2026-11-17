@@ -38,7 +38,7 @@ fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
 
   d.projects.forEach((pr) => {
     const c = el("article", "card",
-      `<span class="k">${esc(pr.tag)}</span><h3>${esc(pr.title)}</h3><p>${esc(pr.desc)}</p>
+      `${pr.status ? `<span class="status">${esc(pr.status)}</span>` : ""}<span class="k">${esc(pr.tag)}</span><h3>${esc(pr.title)}</h3><p>${esc(pr.desc)}</p>
        <ul class="hl">${(pr.highlights || []).map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
        ${pr.link ? `<span class="soon">${esc(pr.linkLabel)}</span>` : ""}
        <div class="stack">${pr.stack.map((s) => `<span class="tag">${esc(s)}</span>`).join("")}</div>`);

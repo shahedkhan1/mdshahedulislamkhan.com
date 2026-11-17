@@ -32,4 +32,5 @@
 - Redesign built on branch `redesign`; preview: https://redesign.mdshahedulislamkhan-com.pages.dev (chat shows an error there only because the API key secret is set for Production, not Preview).
 - Look: harbour blue / salt grey / hazard-yellow accent; Bricolage Grotesque + Source Serif 4; ruled entries instead of boxed cards; sticky section headings; auto dark mode.
 - Decisions: hero "ask my assistant" box tried and removed (owner: doesn't fit); floating chat button kept. New "Products" section (Ticket Matcher, Ticket Matcher in ZoomMate, Guarded Browser Assistant) placed before Experience; other work under "Other projects". data.json projects now have a `kind` field.
+- Products now carry a "Delivered · used by ..." status chip (facts from owner: Ticket Matcher, ZoomMate agent and Guarded Browser Assistant used by the IT service desk; ZoomMate side panel used across DTS). Section titled "Delivered products".
 - Next: owner reviews preview; then merge `redesign` to `main` (deploys live).

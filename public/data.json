@@ -93,7 +93,8 @@
         "Trained on a decade of tickets, tested on unseen later ones"
       ],
       "linkLabel": "",
-      "kind": "product"
+      "kind": "product",
+      "status": "Delivered · used by the IT service desk"
     },
     {
       "title": "Ticket Matcher in ZoomMate",
@@ -111,7 +112,8 @@
       ],
       "link": "",
       "linkLabel": "",
-      "kind": "product"
+      "kind": "product",
+      "status": "Delivered · agent used by the IT service desk, side panel used across DTS"
     },
     {
       "title": "Guarded Browser Assistant",
@@ -130,7 +132,8 @@
       ],
       "link": "",
       "linkLabel": "",
-      "kind": "product"
+      "kind": "product",
+      "status": "Delivered · used by the IT service desk"
     },
     {
       "title": "Phantom Signal",
