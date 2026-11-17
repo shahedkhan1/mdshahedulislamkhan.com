@@ -21,3 +21,9 @@
 - Cloudflare DNS zone active; Namecheap nameservers set to Cloudflare (domain is still registered at Namecheap, renews to 14 Apr 2027).
 - Deleted the old apex A and www CNAME; Pages CNAMEs added for apex and www. Mail (MX/SPF/DKIM) and cPanel-subdomain records left as imported.
 - Next: transfer registration to Cloudflare Registrar before 14 Apr 2027 (at-cost renewal); delete old Anthropic key GLz…ZQAA; set a monthly spend limit; let Namecheap hosting lapse; resume/Open Graph updates; then LinkedIn.
+
+## 2026-11-17 (API key cleanup)
+- Deleted the old legacy Anthropic key (the one the old Namecheap chatbot used; last used 27 Oct). Only the portfolio-cloudflare key (expires 17 Nov 2027) and an expired key remain.
+- Monthly Anthropic spend limit lowered from $200,000 to $5.
+- Chatbot re-tested after both changes: working.
+- Remaining: Namecheap 2FA, let hosting lapse, transfer registration to Cloudflare before 14 Apr 2027, resume/Open Graph, then LinkedIn.
