@@ -119,13 +119,12 @@
     {
       "title": "ZoomMate Side Panel",
       "tag": "Chrome extension · Digital Technology Solutions",
-      "desc": "A Chrome extension that opens ZoomMate in the browser side panel, next to any web page. I redesigned the layout for a narrow panel rather than shrinking the regular ZoomMate app into it.",
+      "desc": "A Chrome extension that opens ZoomMate in the browser side panel beside any web page. The layout was redesigned for a narrow panel rather than reduced from the full ZoomMate application.",
       "highlights": [
-        "Strips the screen down to the chat box and the answers, hiding the project settings, carousel, quick-action chips and suggestions",
-        "Home page: greeting in the middle, chat box pinned at the bottom",
-        "Project and agent pages: title on top, scrollable chat history in the middle, chat box at the bottom",
-        "Menu opens on load and closes when a project or agent is picked, so the chat gets the full width",
-        "Manifest V3 extension, version 0.6.3"
+        "Shows only the chat box and answers; project settings, the carousel, quick-action chips and suggestions are hidden",
+        "Home page: greeting centred, chat box fixed at the bottom",
+        "Project and agent pages: title at the top, scrollable chat history in the middle, chat box at the bottom",
+        "Menu opens on load and closes when a project or agent is selected, giving the chat the full width"
       ],
       "stack": [
         "Chrome extension",
@@ -141,10 +140,12 @@
     {
       "title": "Deskmate",
       "tag": "AI agent · Service desk ticket helper powered by ZoomMate",
-      "desc": "A service desk ticket helper powered by Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
+      "desc": "A service desk ticket helper powered by Zoom's ZoomMate. It gives service desk officers ticket guidance directly within their Zoom chat.",
       "highlights": [
-        "Recommends the next action, the article to open and the team to escalate to",
-        "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only"
+        "Recommends the next action, the knowledge article to open and the team to escalate to",
+        "Provides cited steps and similar past tickets alongside each recommendation",
+        "Draws on a curated knowledge base of the desk's articles and resolved tickets, comprising over 100 context files, under strict answer instructions",
+        "Advisory only: it never sends or changes anything in a ticket"
       ],
       "stack": [
         "ZoomMate",
