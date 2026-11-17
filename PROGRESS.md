@@ -40,3 +40,4 @@
 - ZoomMate Side Panel card expanded with the pane-redesign details (from the zoommate-sidepanel repo tidy.js).
 - Deskmate and ZoomMate Side Panel cards rewritten to four formal bullets each (owner wanted a professional, formal register).
 - Next: owner reviews preview; then merge `redesign` to `main` (deploys live).
+- Formal-register pass over the whole site (owner: "formal language makes the whole website formal"): tagline, all product and project cards, experience points, services page, research intro and contact line rewritten in a formal register. Facts unchanged.

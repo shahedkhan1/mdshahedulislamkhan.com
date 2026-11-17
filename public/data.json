@@ -2,7 +2,7 @@
   "profile": {
     "name": "Md Shahedul Islam Khan",
     "headline": "AI security practitioner",
-    "tagline": "MSc Cybersecurity. I build AI and automation systems and test whether they can be trusted.",
+    "tagline": "MSc Cybersecurity. Designs and builds AI and automation systems, and evaluates whether they can be relied upon.",
     "location": "Newcastle, NSW",
     "email": "mdshahedulislam.khan@newcastle.edu.au",
     "links": {
@@ -31,9 +31,9 @@
       "type": "Industry",
       "points": [
         "Front-line technical support for clients: triage, troubleshooting and escalation",
-        "Designed, built and evaluated the Ticket Matcher, a retrieval tool that helps IT service desk officers find how similar tickets were resolved",
-        "Designed an AI agent on Zoom Mate that helps IT service desk officers resolve tickets from their Zoom chat",
-        "Designed a browser extension that automates long, repetitive web forms"
+        "Designed, built and evaluated the Ticket Matcher, a retrieval tool that enables IT service desk officers to find how similar tickets were resolved",
+        "Designed an AI agent on ZoomMate that assists IT service desk officers in resolving tickets from within Zoom chat",
+        "Designed a browser extension that automates lengthy, repetitive web forms"
       ]
     },
     {
@@ -44,9 +44,9 @@
       "end": "Present",
       "type": "Research",
       "points": [
-        "Built note-level bias detection (explicit, implicit, none) for MIMIC-III discharge summaries on 9,000 human-labelled notes with patient-grouped splits and a frozen 1,500-note test set",
+        "Developed note-level bias detection (explicit, implicit, none) for MIMIC-III discharge summaries, using 9,000 human-labelled notes, patient-grouped splits and a frozen 1,500-note test set",
         "Benchmarked a lexicon rule, TF-IDF, three long-context clinical encoders and QLoRA-fine-tuned Llama 3.1 8B",
-        "Keyword-masking, paired bootstrap and calibration analyses; study completed and under peer review"
+        "Conducted keyword-masking, paired bootstrap and calibration analyses; the study is complete and under peer review"
       ]
     },
     {
@@ -57,9 +57,9 @@
       "end": "Jul 2026",
       "type": "Teaching",
       "points": [
-        "Taught SQL, data modelling, data wrangling and big data to 900+ students (INFO6002, STAT6001, INFT6201, COMP1010)",
-        "Supervised 100+ capstone projects across pipelines, analytics and ML",
-        "Designed assessments and gave structured feedback"
+        "Taught SQL, data modelling, data wrangling and big data to more than 900 students (INFO6002, STAT6001, INFT6201, COMP1010)",
+        "Supervised more than 100 capstone projects spanning data pipelines, analytics and machine learning",
+        "Designed assessments and provided structured feedback"
       ]
     },
     {
@@ -70,8 +70,8 @@
       "end": "Jun 2022",
       "type": "Research",
       "points": [
-        "Built an end-to-end transformer pipeline for Chinese text classification",
-        "Peer-reviewed publication at ICIC 2022 (Springer, pp. 170–182)"
+        "Developed an end-to-end transformer pipeline for Chinese text classification",
+        "Co-authored a peer-reviewed publication at ICIC 2022 (Springer, pp. 170–182)"
       ]
     }
   ],
@@ -79,7 +79,7 @@
     {
       "title": "Ticket Matcher",
       "tag": "AI · IT service desk · Completed",
-      "desc": "Recommends the next action on an IT service desk ticket and shows the real past fixes behind the advice.",
+      "desc": "A decision-support tool for IT service desk tickets. It recommends the next action and presents the resolved tickets on which the recommendation is based.",
       "stack": [
         "Python",
         "PyTorch",
@@ -88,9 +88,9 @@
       ],
       "link": "",
       "highlights": [
-        "Fine-tuned BGE-large encoder (tm-res2, 335M) retrieves similar past tickets with sources",
-        "Decision layer recommends fix, escalate or gather more detail",
-        "Trained on a decade of tickets, tested on unseen later ones"
+        "Retrieves similar past tickets, with their sources, using a fine-tuned BGE-large encoder (tm-res2, 335M parameters)",
+        "Applies a decision layer that recommends a fix, escalation, or the gathering of further detail",
+        "Trained on a decade of tickets and evaluated on later tickets that were not seen in training"
       ],
       "linkLabel": "",
       "kind": "product",
@@ -99,11 +99,11 @@
     {
       "title": "Guarded Browser Assistant",
       "tag": "Automation · IT service desk",
-      "desc": "Browser extension for Chrome and Edge that completes long web forms from a request in another system, following written rules instead of AI.",
+      "desc": "A browser extension for Chrome and Edge that completes lengthy web forms from a request held in another system. It follows written rules and does not use AI.",
       "highlights": [
-        "171 written, versioned desk rules checked by 519 automated tests",
-        "CI gate on every change: typecheck, tests, build, privacy scan",
-        "Fail-closed: reads back every value, halts on surprises, the person always clicks Submit"
+        "171 written, versioned service desk rules, verified by 519 automated tests",
+        "A continuous integration gate on every change: type checking, tests, build and privacy scan",
+        "Fail-closed by design: every value is read back, processing halts on any unexpected condition, and the officer always performs the final submission"
       ],
       "stack": [
         "TypeScript",
@@ -119,12 +119,12 @@
     {
       "title": "ZoomMate Side Panel",
       "tag": "Chrome extension · Digital Technology Solutions",
-      "desc": "A Chrome extension that opens ZoomMate in the browser side panel beside any web page. The layout was redesigned for a narrow panel rather than reduced from the full ZoomMate application.",
+      "desc": "A Chrome extension that opens ZoomMate in the browser side panel beside any web page. The interface was redesigned for a narrow panel rather than reduced from the full ZoomMate application.",
       "highlights": [
-        "Shows only the chat box and answers; project settings, the carousel, quick-action chips and suggestions are hidden",
-        "Home page: greeting centred, chat box fixed at the bottom",
-        "Project and agent pages: title at the top, scrollable chat history in the middle, chat box at the bottom",
-        "Menu opens on load and closes when a project or agent is selected, giving the chat the full width"
+        "Presents only the chat box and responses; project settings, the carousel, quick-action chips and suggestions are hidden",
+        "Home page: the greeting is centred and the chat box is fixed at the bottom",
+        "Project and agent pages: the title is placed at the top, a scrollable chat history in the middle and the chat box at the bottom",
+        "The menu opens on load and closes once a project or agent is selected, allowing the chat the full width of the panel"
       ],
       "stack": [
         "Chrome extension",
@@ -140,12 +140,12 @@
     {
       "title": "Deskmate",
       "tag": "AI agent · Service desk ticket helper powered by ZoomMate",
-      "desc": "A service desk ticket helper powered by Zoom's ZoomMate. It gives service desk officers ticket guidance directly within their Zoom chat.",
+      "desc": "A service desk ticket assistant powered by Zoom's ZoomMate. It provides service desk officers with ticket guidance directly within Zoom chat.",
       "highlights": [
-        "Recommends the next action, the knowledge article to open and the team to escalate to",
-        "Provides cited steps and similar past tickets alongside each recommendation",
+        "Recommends the next action, the knowledge article to consult and the team to which the ticket should be escalated",
+        "Supplies cited resolution steps and similar past tickets with each recommendation",
         "Draws on a curated knowledge base of the desk's articles and resolved tickets, comprising over 100 context files, under strict answer instructions",
-        "Advisory only: it never sends or changes anything in a ticket"
+        "Advisory only: it does not send or alter anything within a ticket"
       ],
       "stack": [
         "ZoomMate",
@@ -159,7 +159,7 @@
     {
       "title": "Phantom Signal",
       "tag": "AI security · Tomago Aluminium",
-      "desc": "MSc capstone with Tomago Aluminium: an authorised LLM-driven phishing simulation measuring an industrial organisation's exposure to AI-generated social engineering.",
+      "desc": "MSc capstone project with Tomago Aluminium: an authorised, LLM-driven phishing simulation that measured an industrial organisation's exposure to AI-generated social engineering.",
       "stack": [
         "Python",
         "BeautifulSoup",
@@ -167,9 +167,9 @@
       ],
       "link": "",
       "highlights": [
-        "OSINT collected with BeautifulSoup into staff persona profiles",
-        "Gemma 3 12B fine-tuned to generate targeted phishing emails",
-        "Simulated emails bypassed email filtering and drew recipient engagement; delivered mitigation recommendations"
+        "Collected open-source intelligence with BeautifulSoup and compiled it into staff persona profiles",
+        "Fine-tuned Gemma 3 12B to generate targeted phishing emails",
+        "The simulated emails bypassed email filtering and drew recipient engagement; mitigation recommendations were delivered"
       ],
       "linkLabel": "",
       "kind": "project"
@@ -177,7 +177,7 @@
     {
       "title": "Rock Detection Pipeline",
       "tag": "Computer vision · Industrial",
-      "desc": "Computer vision pipeline that detects rocks on coal conveyor belts under variable light, occlusion and high speed.",
+      "desc": "A computer vision pipeline that detects rocks on coal conveyor belts under variable lighting, occlusion and high belt speed.",
       "stack": [
         "Python",
         "YOLOv7",
@@ -186,8 +186,8 @@
       "link": "",
       "highlights": [
         "YOLOv7 object detection tuned for industrial conditions",
-        "OpenCV preprocessing for lighting variation",
-        "End-to-end Python pipeline from image to detection"
+        "OpenCV preprocessing to compensate for lighting variation",
+        "End-to-end Python pipeline from image input to detection output"
       ],
       "linkLabel": "",
       "kind": "project"
@@ -195,7 +195,7 @@
     {
       "title": "Intelligent Library Assistant",
       "tag": "LLM · University library",
-      "desc": "LLM assistant that answers university library questions using retrieval over library content.",
+      "desc": "An LLM assistant that answers university library enquiries using retrieval over library content.",
       "stack": [
         "Python",
         "gpt-oss-20b",
@@ -204,8 +204,8 @@
       "link": "",
       "highlights": [
         "Retrieval-augmented generation over library content",
-        "Fine-tuned gpt-oss-20b with prompt engineering",
-        "Python implementation of the full chat flow"
+        "Fine-tuned gpt-oss-20b, combined with prompt engineering",
+        "Python implementation of the complete chat flow"
       ],
       "linkLabel": "",
       "kind": "project"
@@ -280,37 +280,37 @@
     ]
   },
   "services": {
-    "intro": "One partner for the AI tools a business actually needs, from your website to the phone calls and admin that eat your day. Built for Australian businesses.",
+    "intro": "A single partner for the AI tools a business requires, from its website to the telephone calls and administration that consume its working day. Designed for Australian businesses.",
     "items": [
       {
         "title": "Websites",
-        "desc": "Fast, modern sites designed and built for your business, with the content kept easy to update."
+        "desc": "Fast, modern websites designed and built for each business, with content that is straightforward to maintain."
       },
       {
         "title": "AI phone and message assistants",
-        "desc": "Answer calls and messages 24/7, collect each caller's details and job needs, and send you an instant summary. Choose an Australian-accent voice or your own voice, cloned with your consent."
+        "desc": "Answers calls and messages at all hours, records each caller's details and job requirements, and sends an immediate summary. An Australian-accent voice or the client's own voice, cloned with consent, is available."
       },
       {
         "title": "Workflow automation",
-        "desc": "Connect your forms, enquiries, bookings and follow-ups so repetitive admin runs itself."
+        "desc": "Connects forms, enquiries, bookings and follow-ups so that repetitive administration is completed automatically."
       },
       {
         "title": "Custom AI tools and chatbots",
-        "desc": "Assistants trained on your own business rules and content that answer client questions accurately and hand over to you when they should."
+        "desc": "Assistants trained on a business's own rules and content, which answer client questions accurately and refer matters to staff where appropriate."
       },
       {
         "title": "For trades and consultancies",
-        "desc": "Set up for tradies who can't pick up on the job, and for offices and clinics that need consistent answers around the clock."
+        "desc": "Suited to tradespeople who cannot answer calls on site, and to offices and clinics that require consistent responses around the clock."
       }
     ],
-    "cta": "Every solution is built and customised for your specific setup."
+    "cta": "Every solution is designed and configured to suit the client's specific environment."
   },
   "research": {
-    "intro": "Applied research at the intersection of NLP, clinical text and security: building models that are tested properly, not just trained.",
+    "intro": "Applied research at the intersection of natural language processing, clinical text and security: building models that are rigorously evaluated rather than merely trained.",
     "current": {
       "title": "Clinical Bias Detection in Discharge Summaries",
       "status": "Completed · under peer review",
-      "desc": "Note-level detection of clinician bias (explicit, implicit, none) in MIMIC-III v1.4 discharge summaries, using 9,000 human-labelled notes, patient-grouped splits and a frozen 1,500-note test set. Compares a lexicon baseline and TF-IDF with long-context clinical encoders (BioClinical ModernBERT, Clinical-Longformer, Clinical-BigBird) and QLoRA-fine-tuned Llama 3.1 8B, with a keyword-masking test, paired bootstrap intervals and calibration analysis. Results will be shared after peer review.",
+      "desc": "Note-level detection of clinician bias (explicit, implicit, none) in MIMIC-III v1.4 discharge summaries, using 9,000 human-labelled notes, patient-grouped splits and a frozen 1,500-note test set. Compares a lexicon baseline and TF-IDF with long-context clinical encoders (BioClinical ModernBERT, Clinical-Longformer, Clinical-BigBird) and QLoRA-fine-tuned Llama 3.1 8B, with a keyword-masking test, paired bootstrap intervals and calibration analysis. Results will be published following peer review.",
       "stack": [
         "Python",
         "PyTorch",
