@@ -58,3 +58,4 @@
 - Name heading no longer forced onto two lines (removed 12ch cap; font scales with window width, wraps only when the window is too narrow).
 - Top-left brand now shows the full name 'Md Shahedul Islam Khan' on all three pages (was 'Shahed Khan').
 - Resume PDF rebuilt from the site's current facts (AI security practitioner headline, DTS role, Security+ booked, delivered products) and re-uploaded as public/shahed_resume.pdf. Referee phone numbers and emails removed from the public file ('Available on request'); the old PDF with them remains in git history.
+- Skills section on the site now mirrors the new resume: Security, AI & LLMs, Languages, Automation, DevOps, Cloud & data, Currently learning.

@@ -256,21 +256,38 @@
       "Identity & access management",
       "Incident response & vulnerability management"
     ],
-    "AI & ML": [
+    "AI & LLMs": [
       "PyTorch",
       "Transformers",
       "LLM fine-tuning (QLoRA)",
-      "RAG"
+      "RAG",
+      "AI agents",
+      "Prompt engineering"
     ],
     "Languages": [
       "Python",
       "SQL",
-      "JavaScript"
+      "JavaScript",
+      "TypeScript",
+      "Bash",
+      "LaTeX"
     ],
     "Automation": [
       "Browser extensions (Manifest V3)",
       "Browser automation",
       "ETL/ELT"
+    ],
+    "DevOps": [
+      "GitHub Actions",
+      "Docker",
+      "Linux",
+      "Git"
+    ],
+    "Cloud & data": [
+      "AWS (ECS, API Gateway, Lambda, S3)",
+      "Apache Spark",
+      "MySQL",
+      "Power BI"
     ],
     "Currently learning": [
       "PySpark",
