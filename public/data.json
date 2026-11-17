@@ -281,11 +281,15 @@
       "Linux",
       "Git"
     ],
-    "Cloud & data": [
+    "Data engineering": [
+      "Data preparation & cleaning",
+      "Text pre-processing for NLP",
+      "Dataset construction & sampling",
+      "Web scraping (BeautifulSoup)"
+    ],
+    "Cloud & big data": [
       "AWS (ECS, API Gateway, Lambda, S3)",
-      "Apache Spark",
-      "ETL/ELT",
-      "Power BI"
+      "Apache Spark"
     ],
     "Currently learning": [
       "PySpark",
