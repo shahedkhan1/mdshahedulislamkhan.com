@@ -13,9 +13,6 @@ fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
   p.focus.forEach((f) => $("focus").append(el("li", "", esc(f))));
 
   const linkBtn = (label, href, primary) => { const a = el("a", "btn" + (primary ? " primary" : ""), esc(label)); a.href = href; return a; };
-  const ask = (t) => window.skAsk && window.skAsk(t);
-  ["What is Shahed working on now?", "Does he build websites?", "Tell me about his research", "How do I contact him?"].forEach((q) => { const b = el("button", "", esc(q)); b.type = "button"; b.onclick = () => ask(q); $("sugg").append(b); });
-  $("askForm").onsubmit = (e) => { e.preventDefault(); const t = $("askInput").value.trim(); if (t) { ask(t); $("askInput").value = ""; } };
   Object.entries(p.links).filter(([, v]) => v && v !== "#").forEach(([k, v]) => $("links").append(linkBtn(k, v)));
   $("mail").textContent = p.email; $("mail").href = "mailto:" + p.email;
 

@@ -43,19 +43,7 @@ h1{font:800 clamp(44px,8.4vw,104px)/.95 var(--display);letter-spacing:-.035em;ma
 .chips{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none;padding:0;margin:26px 0 0;font:500 15px var(--display);color:var(--mute)}
 .chips li{padding:0;border:0;border-bottom:2px solid var(--signal)}
 
-/* hero: ask the assistant */
-.ask{margin-top:44px;background:var(--block);color:var(--on-block);border-radius:20px;padding:28px 30px 26px;max-width:760px}
-.ask h2{all:unset;display:block;font:700 22px/1.2 var(--display);margin:0 0 4px}
-.ask p{margin:0 0 18px;font-size:16px;opacity:.82}
-.ask form{display:flex;gap:10px}
-.ask input{flex:1;min-width:0;font:17px var(--serif);padding:13px 16px;border-radius:12px;border:2px solid transparent;background:#F9FBFA;color:#0C1B26}
-.ask input::placeholder{color:#5b6b73}
-.ask button.go{font:700 16px var(--display);padding:0 22px;border:0;border-radius:12px;background:var(--signal);color:#0C1B26;cursor:pointer}
-.ask button.go:hover{filter:brightness(1.06)}
-.ask .sugg{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.ask .sugg button{font:500 14.5px var(--display);padding:7px 14px;border-radius:999px;border:1px solid rgba(242,247,246,.4);background:none;color:var(--on-block);cursor:pointer;text-align:left}
-.ask .sugg button:hover{background:rgba(242,247,246,.14);border-color:var(--signal)}
-.hero .cta{margin-top:30px}
+.hero-cta{margin-top:34px}
 
 /* experience */
 .filters{display:flex;gap:6px;margin-bottom:28px;flex-wrap:wrap}
@@ -131,8 +119,6 @@ body .skc-send:hover:not(:disabled){background:var(--signal);border-color:var(--
   .btn{font-size:14px;padding:8px 14px}
   main{padding:0 18px}footer{padding:20px 18px 36px}
   .hero{padding-top:48px}
-  .ask{padding:22px 18px;border-radius:16px;margin-top:34px}
-  .ask form{flex-direction:column}.ask button.go{padding:12px}
   .tagline{font-size:18px}
   .creds li{flex-direction:column;gap:2px}
 }
