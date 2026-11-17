@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One-stop AI Solutions — Shahedul Islam Khan</title>
+<meta name="description" content="AI assistants that answer calls and client messages 24/7 for local Australian businesses.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html">SK<span>_</span></a>
+  <nav>
+    <a href="index.html">← Home</a>
+    <a href="research.html">Research</a>
+    <a href="shahed_resume.pdf">Resume</a>
+  </nav>
+  <a class="btn primary nav-cta" href="index.html#contact">Get in touch</a>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">// Services</p>
+    <h1>One-stop AI solutions</h1>
+    <p class="tagline" id="svcIntro"></p>
+  </section>
+  <section><h2><span>01</span> What I build</h2><div class="grid" id="svcGrid"></div>
+    <p class="tagline" id="svcCta"></p></section>
+</main>
+<footer><span id="year"></span> · <a href="index.html">← Back to home</a></footer>
+<script>
+const $=(i)=>document.getElementById(i);
+const esc=(s)=>String(s??"").replace(/[&<>"]/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("data.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+  const s=d.services;
+  $("year").textContent="© "+new Date().getFullYear()+" "+d.profile.name;
+  $("svcIntro").textContent=s.intro; $("svcCta").textContent=s.cta;
+  s.items.forEach(i=>{const e=document.createElement("article");e.className="card";e.innerHTML=`<h3>${esc(i.title)}</h3><p>${esc(i.desc)}</p>`;$("svcGrid").append(e);});
+});
+</script>
+<script src="chat.js"></script>
+</body>
+</html>

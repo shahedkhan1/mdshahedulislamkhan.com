@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Shahedul Islam Khan</title>
+<meta name="description" content="Research and publications: clinical NLP, bias detection and cybersecurity.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html">SK<span>_</span></a>
+  <nav>
+    <a href="index.html">← Home</a>
+    <a href="services.html">Services</a>
+    <a href="shahed_resume.pdf">Resume</a>
+  </nav>
+  <a class="btn primary nav-cta" href="index.html#contact">Get in touch</a>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">// Research</p>
+    <h1>Research</h1>
+    <p class="tagline" id="intro"></p>
+  </section>
+  <section id="current"><h2><span>01</span> Featured research</h2><div id="cur"></div></section>
+  <section id="publications"><h2><span>02</span> Publications</h2><div class="grid" id="pubs"></div></section>
+  <section id="interests"><h2><span>03</span> Research interests</h2><div class="grid" id="ints"></div></section>
+</main>
+<footer><span id="year"></span> · <a href="index.html">← Back to home</a></footer>
+<script>
+const $=(i)=>document.getElementById(i);
+const esc=(s)=>String(s??"").replace(/[&<>"]/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;e.innerHTML=h;return e;};
+fetch("data.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+  const r=d.research;
+  $("year").textContent="© "+new Date().getFullYear()+" "+d.profile.name;
+  $("intro").textContent=r.intro;
+  const c=r.current;
+  $("cur").append(el("article","card",`<span class="k">${esc(c.status)}</span><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p>
+    <div class="stack">${c.stack.map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div>`));
+  r.publications.forEach(p=>$("pubs").append(el("article","card",`<span class="k">${esc(p.venue)}</span><h3>${esc(p.title)}</h3><p>${esc(p.authors)}</p>${p.link?`<a class="soon" href="${esc(p.link)}" rel="noopener">↗ ${esc(p.linkLabel)}</a>`:""}`)));
+  r.interests.forEach(i=>$("ints").append(el("article","card",`<h3>${esc(i.title)}</h3><p>${esc(i.desc)}</p>`)));
+});
+</script>
+<script src="chat.js"></script>
+</body>
+</html>
