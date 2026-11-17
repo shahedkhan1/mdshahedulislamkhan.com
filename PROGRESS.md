@@ -99,3 +99,6 @@
 - Applied on SEEK: IT Support - Helpdesk Concierge (Toim Technology; any regional NSW, prefer Newcastle; owner confirmed police check yes, WWC no/will obtain, start in 2 weeks). Session total: 5 applications (Brennan, Empowered Vision, Wirrigan, Westgate Labs, Toim).
 - Not submitted: Cloudwize L1 Solutions Engineer (Tamworth) - form has no graduate-visa option and asks Microsoft tools experience; owner to decide.
 - Indeed blocked by Cloudflare check; nothing applied there. Maitland Council and Blueshift still need the owner.
+
+### 2026-11-18 (Cloudwize application)
+- Submitted L1 Solutions Engineer (Cloudwize/Lyra, Tamworth) on SEEK at the owner's instruction: working-rights dropdown set to the closest option (student visa with work rights) because the form had no graduate-visa option; the cover letter states the 485 graduate visa and full work rights. Total SEEK applications this run: 6.
