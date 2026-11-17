@@ -97,16 +97,19 @@
       "status": "Delivered · used by the IT service desk"
     },
     {
-      "title": "Deskmate",
-      "tag": "AI agent · Service desk ticket helper powered by ZoomMate",
-      "desc": "A service desk ticket helper powered by Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
+      "title": "Guarded Browser Assistant",
+      "tag": "Automation · IT service desk",
+      "desc": "Browser extension for Chrome and Edge that completes long web forms from a request in another system, following written rules instead of AI.",
       "highlights": [
-        "Recommends the next action, the article to open and the team to escalate to",
-        "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only"
+        "171 written, versioned desk rules checked by 519 automated tests",
+        "CI gate on every change: typecheck, tests, build, privacy scan",
+        "Fail-closed: reads back every value, halts on surprises, the person always clicks Submit"
       ],
       "stack": [
-        "ZoomMate",
-        "Prompt & knowledge design"
+        "TypeScript",
+        "Manifest V3",
+        "Vitest",
+        "GitHub Actions"
       ],
       "link": "",
       "linkLabel": "",
@@ -130,19 +133,16 @@
       "status": "Delivered · used across DTS"
     },
     {
-      "title": "Guarded Browser Assistant",
-      "tag": "Automation · IT service desk",
-      "desc": "Browser extension for Chrome and Edge that completes long web forms from a request in another system, following written rules instead of AI.",
+      "title": "Deskmate",
+      "tag": "AI agent · Service desk ticket helper powered by ZoomMate",
+      "desc": "A service desk ticket helper powered by Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
       "highlights": [
-        "171 written, versioned desk rules checked by 519 automated tests",
-        "CI gate on every change: typecheck, tests, build, privacy scan",
-        "Fail-closed: reads back every value, halts on surprises, the person always clicks Submit"
+        "Recommends the next action, the article to open and the team to escalate to",
+        "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only"
       ],
       "stack": [
-        "TypeScript",
-        "Manifest V3",
-        "Vitest",
-        "GitHub Actions"
+        "ZoomMate",
+        "Prompt & knowledge design"
       ],
       "link": "",
       "linkLabel": "",
