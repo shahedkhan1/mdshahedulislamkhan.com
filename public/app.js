@@ -45,7 +45,7 @@ fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
     (pr.kind === "product" ? $("productGrid") : $("projectGrid")).append(c);
   });
 
-  Object.entries(d.skills).forEach(([k, v]) => $("skillList").append(el("div", "", `<h3>${esc(k)}</h3>${v.map((s) => `<span>${esc(s)}</span>`).join("")}`)));
+  Object.entries(d.skills).forEach(([k, v]) => $("skillList").append(el("div", "", `<h3>${esc(k)}</h3><div class="tags">${v.map((s) => `<span>${esc(s)}</span>`).join("")}</div>`)));
   ["Education", "Certifications", "Courses", "Awards"].forEach((g) => {
     const items = d.credentials.filter((c) => c.group === g);
     if (!items.length) return;

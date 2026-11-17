@@ -75,8 +75,9 @@ h1{font:800 clamp(44px,8.4vw,104px)/.95 var(--display);letter-spacing:-.035em;ma
 .skills>div{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--line);background:none}
 .skills>div:last-child{border-bottom:1px solid var(--line)}
 .skills h3{font:700 16px var(--display);margin:0}
-.skills span{display:inline;margin:0;font:17px var(--serif);padding:0;border:0;border-radius:0;color:var(--text)}
-.skills span:not(:last-child)::after{content:" / ";color:var(--mute)}
+.skills>div{align-items:start}
+.skills .tags{display:flex;flex-wrap:wrap;gap:8px}
+.skills .tags span{font:500 15px var(--display);padding:5px 14px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--text)}
 
 /* credentials */
 .credwrap{display:grid;gap:34px}
