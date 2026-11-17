@@ -99,21 +99,35 @@
     {
       "title": "Ticket Matcher in ZoomMate",
       "tag": "AI agent · IT service desk",
-      "desc": "A Ticket Matcher agent in Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat, plus a side-panel Chrome extension that opens ZoomMate next to any page.",
+      "desc": "A Ticket Matcher agent in Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
       "highlights": [
         "Recommends the next action, the article to open and the team to escalate to",
-        "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only",
-        "Side-panel Chrome extension (Manifest V3, v0.6.3)"
+        "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only"
       ],
       "stack": [
         "ZoomMate",
-        "Prompt & knowledge design",
-        "Chrome extension"
+        "Prompt & knowledge design"
       ],
       "link": "",
       "linkLabel": "",
       "kind": "product",
-      "status": "Delivered · agent used by the IT service desk, side panel used across DTS"
+      "status": "Delivered · used by the IT service desk"
+    },
+    {
+      "title": "ZoomMate Side Panel",
+      "tag": "Chrome extension · Digital Technology Solutions",
+      "desc": "A Chrome extension that opens ZoomMate in the browser side panel, next to any web page.",
+      "highlights": [
+        "Manifest V3 extension, version 0.6.3"
+      ],
+      "stack": [
+        "Chrome extension",
+        "Manifest V3"
+      ],
+      "link": "",
+      "linkLabel": "",
+      "kind": "product",
+      "status": "Delivered · used across DTS"
     },
     {
       "title": "Guarded Browser Assistant",
