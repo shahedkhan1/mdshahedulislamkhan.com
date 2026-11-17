@@ -259,8 +259,7 @@
     "AI & LLMs": [
       "PyTorch",
       "Transformers",
-      "LLM fine-tuning",
-      "QLoRA",
+      "LLM & encoder fine-tuning",
       "RAG",
       "AI agents"
     ],
