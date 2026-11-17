@@ -261,8 +261,7 @@
       "Transformers",
       "LLM fine-tuning (QLoRA)",
       "RAG",
-      "AI agents",
-      "Prompt engineering"
+      "AI agents"
     ],
     "Languages": [
       "Python",
