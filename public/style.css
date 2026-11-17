@@ -88,7 +88,8 @@ h1{font:800 clamp(44px,8.4vw,104px)/.95 var(--display);letter-spacing:-.035em;ma
 .creds li>small{white-space:nowrap}
 
 /* contact */
-.mail{display:inline-block;font:700 clamp(20px,3.6vw,38px)/1.2 var(--display);letter-spacing:-.02em;text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:4px;text-underline-offset:6px;overflow-wrap:anywhere}
+.mailrow{container-type:inline-size;margin:0}
+.mail{display:inline-block;max-width:100%;overflow-wrap:anywhere;font:700 clamp(12px,min(4.4cqw,38px),38px)/1.2 var(--display);letter-spacing:-.02em;text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:4px;text-underline-offset:6px;overflow-wrap:anywhere}
 .mail:hover{background:var(--signal);color:#0C1B26;text-decoration:none}
 #contact .tagline{margin-bottom:18px}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
