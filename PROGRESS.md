@@ -53,3 +53,4 @@
 - Product status labels now name where each is used in full, no 'DTS' abbreviation: 'Used by the IT service desk, University of Newcastle' / 'Used across Digital Technology Solutions, University of Newcastle'. Heading stays 'Delivered products'.
 - Desktop width: main/footer max-width raised from 1080px to 1360px and the nav aligned to the same edges (less empty margin on full-size monitors).
 - Contact email now sizes itself to its container (cqw units) so it never breaks mid-address at any window size.
+- Ultra-wide screens: content max-width raised to 2000px (nav aligned) and project/product cards switch to three columns at 1800px+; below that the layout stays fluid.
