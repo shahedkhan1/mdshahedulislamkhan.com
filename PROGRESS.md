@@ -64,3 +64,4 @@
 - Skills: 'LLM fine-tuning (QLoRA)' split into 'LLM fine-tuning' and 'QLoRA' so it no longer implies QLoRA is the only method. Site and resume updated.
 - Skills: 'LLM fine-tuning' renamed 'LLM & encoder fine-tuning'; standalone QLoRA dropped from the skills lists (owner: not a differentiator). QLoRA remains only in the factual project/experience wording. Site and resume updated.
 - Skills: ETL/ELT and Power BI removed from the site, resume and chatbot skills line. New 'Data engineering' group (data preparation & cleaning, text pre-processing for NLP, dataset construction & sampling, web scraping) and 'Cloud & big data' (AWS, Apache Spark). Resume summary mentions NLP data preparation. Chatbot KB: QLoRA skill wording generalised.
+- Data engineering skills: merged the overlapping 'preparation & cleaning' and 'text pre-processing' into 'Data cleaning & pre-processing for NLP' (site, resume, chatbot KB).

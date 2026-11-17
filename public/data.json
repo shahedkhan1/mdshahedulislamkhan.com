@@ -282,8 +282,7 @@
       "Git"
     ],
     "Data engineering": [
-      "Data preparation & cleaning",
-      "Text pre-processing for NLP",
+      "Data cleaning & pre-processing for NLP",
       "Dataset construction & sampling",
       "Web scraping (BeautifulSoup)"
     ],
