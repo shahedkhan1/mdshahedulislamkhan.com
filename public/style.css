@@ -19,7 +19,7 @@ a{color:inherit}
 /* header */
 .nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px max(32px,calc((100% - 2000px)/2 + 32px));
   background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.brand{font:700 20px var(--display);letter-spacing:-.01em;text-decoration:none;margin-right:auto}
+.brand{font:700 20px var(--display);letter-spacing:-.01em;text-decoration:none;margin-right:auto}.brand span{color:var(--accent)}
 .nav nav{display:flex;gap:26px}
 .nav nav a{font:500 16px var(--display);text-decoration:none;color:var(--mute);padding:4px 0;border-bottom:2px solid transparent}
 .nav nav a:hover{color:var(--text);border-color:var(--signal)}
