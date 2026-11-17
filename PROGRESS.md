@@ -15,3 +15,9 @@
 - Chatbot on Cloudflare Pages now works (Haiku 5.5). Cause of the 401: the secret held the console key ID, not the sk-ant key. Re-saved the real key.
 - Removed the temporary key diagnostics from functions/api/chat.js.
 - Next: add the domain to Cloudflare (free), attach it to the Pages project, switch Namecheap nameservers, then delete the old legacy API key and set a monthly spend limit.
+
+## 2026-11-17 (domain moved to Cloudflare)
+- mdshahedulislamkhan.com now serves from Cloudflare Pages (free plan); chatbot works on the real domain.
+- Cloudflare DNS zone active; Namecheap nameservers set to Cloudflare (domain is still registered at Namecheap, renews to 14 Apr 2027).
+- Deleted the old apex A and www CNAME; Pages CNAMEs added for apex and www. Mail (MX/SPF/DKIM) and cPanel-subdomain records left as imported.
+- Next: transfer registration to Cloudflare Registrar before 14 Apr 2027 (at-cost renewal); delete old Anthropic key GLz…ZQAA; set a monthly spend limit; let Namecheap hosting lapse; resume/Open Graph updates; then LinkedIn.
