@@ -273,8 +273,7 @@
     ],
     "Automation": [
       "Browser extensions (Manifest V3)",
-      "Browser automation",
-      "ETL/ELT"
+      "Browser automation"
     ],
     "DevOps": [
       "GitHub Actions",
@@ -285,7 +284,7 @@
     "Cloud & data": [
       "AWS (ECS, API Gateway, Lambda, S3)",
       "Apache Spark",
-      "MySQL",
+      "ETL/ELT",
       "Power BI"
     ],
     "Currently learning": [

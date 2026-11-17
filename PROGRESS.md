@@ -60,3 +60,4 @@
 - Resume PDF rebuilt from the site's current facts (AI security practitioner headline, DTS role, Security+ booked, delivered products) and re-uploaded as public/shahed_resume.pdf. Referee phone numbers and emails removed from the public file ('Available on request'); the old PDF with them remains in git history.
 - Skills section on the site now mirrors the new resume: Security, AI & LLMs, Languages, Automation, DevOps, Cloud & data, Currently learning.
 - Removed 'Prompt engineering' from the skills lists on the site and in the resume PDF (project descriptions still mention it where it was part of the work).
+- Skills: ETL/ELT moved from Automation to Cloud & data; MySQL removed (SQL already covers it). Site and resume PDF updated.
