@@ -37,4 +37,5 @@
 - ZoomMate side panel split into its own product card (owner request); Products now: Ticket Matcher, Ticket Matcher in ZoomMate, ZoomMate Side Panel, Guarded Browser Assistant.
 - "Ticket Matcher in ZoomMate" renamed "Deskmate" (service desk ticket helper powered by ZoomMate), at owner request.
 - Product order changed so Ticket Matcher and Deskmate are not adjacent (2x2 grid, opposite corners): Ticket Matcher, Guarded Browser Assistant, ZoomMate Side Panel, Deskmate.
+- ZoomMate Side Panel card expanded with the pane-redesign details (from the zoommate-sidepanel repo tidy.js).
 - Next: owner reviews preview; then merge `redesign` to `main` (deploys live).

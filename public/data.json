@@ -119,13 +119,19 @@
     {
       "title": "ZoomMate Side Panel",
       "tag": "Chrome extension · Digital Technology Solutions",
-      "desc": "A Chrome extension that opens ZoomMate in the browser side panel, next to any web page.",
+      "desc": "A Chrome extension that opens ZoomMate in the browser side panel, next to any web page. I redesigned the layout for a narrow panel rather than shrinking the regular ZoomMate app into it.",
       "highlights": [
+        "Strips the screen down to the chat box and the answers, hiding the project settings, carousel, quick-action chips and suggestions",
+        "Home page: greeting in the middle, chat box pinned at the bottom",
+        "Project and agent pages: title on top, scrollable chat history in the middle, chat box at the bottom",
+        "Menu opens on load and closes when a project or agent is picked, so the chat gets the full width",
         "Manifest V3 extension, version 0.6.3"
       ],
       "stack": [
         "Chrome extension",
-        "Manifest V3"
+        "Manifest V3",
+        "JavaScript",
+        "CSS"
       ],
       "link": "",
       "linkLabel": "",
