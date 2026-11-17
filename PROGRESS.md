@@ -69,3 +69,4 @@
 - Skills: Automation group merged into 'Automation & DevOps' with the single item 'Browser extensions & automation (Manifest V3)' (site and resume).
 - Name heading is now always on one line at any window width (sized from its container, no wrapping).
 - Top-left brand restored to the original 'SK_' mark (full name kept as its accessible label); the full name stays in the page heading.
+- LinkedIn updated (edited in the browser, not in this repo): headline 'AI security practitioner | MSc Cybersecurity | Applied NLP & LLMs'; About rewritten from the resume (LangChain/LlamaIndex/LLMOps/BI removed); added Client Support Officer (Aug 2026); research role retitled Casual Research Assistant, Healthcare AI (Apr 2026, study complete); Casual Academic ended Jul 2026. Not yet changed: Skills list, Education, Open to work, QLoRA in other places, Apache Spark decision.
