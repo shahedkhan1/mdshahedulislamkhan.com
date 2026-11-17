@@ -79,7 +79,8 @@ export async function onRequestPost({ request, env }) {
     let err = "";
     try { const e = await r.json(); err = (e.error && e.error.type) || ""; } catch {}
     console.log("anthropic error", r.status, err);
-    return json(502, { detail: "Assistant unavailable.", code: r.status, type: err });
+    const k = String(env.ANTHROPIC_API_KEY).trim();
+    return json(502, { detail: "Assistant unavailable.", code: r.status, type: err, keyHint: k.slice(0, 14) + "..." + k.slice(-4), keyLen: k.length });
   }
 
   const data = await r.json();
