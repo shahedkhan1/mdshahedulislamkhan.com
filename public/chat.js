@@ -57,6 +57,7 @@
   win.querySelector(".skc-x").onclick = () => toggle(false);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") toggle(false); });
 
+  window.skAsk = (t) => { toggle(true); input.value = t; form.requestSubmit(); };
   form.onsubmit = async (e) => {
     e.preventDefault();
     const text = input.value.trim();
