@@ -57,3 +57,4 @@
 - 2026-11-17: `redesign` merged to `main` (fast-forward) at owner's instruction ("live it"); live at mdshahedulislamkhan.com and verified loading with the new design. Open: owner to check on phone and ultra-wide; chatbot answers to be re-tested on the live site; LinkedIn update next.
 - Name heading no longer forced onto two lines (removed 12ch cap; font scales with window width, wraps only when the window is too narrow).
 - Top-left brand now shows the full name 'Md Shahedul Islam Khan' on all three pages (was 'Shahed Khan').
+- Resume PDF rebuilt from the site's current facts (AI security practitioner headline, DTS role, Security+ booked, delivered products) and re-uploaded as public/shahed_resume.pdf. Referee phone numbers and emails removed from the public file ('Available on request'); the old PDF with them remains in git history.
