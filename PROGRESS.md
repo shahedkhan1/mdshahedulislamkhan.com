@@ -82,3 +82,9 @@
 - SEEK: one application submitted (Brennan, Service Desk Analyst). Reviewed Smith Family AI Solutions Engineer (external portal, needs account), PRA AI Engineer (senior), TEKsystems desktop (citizenship + NV1), Empowered Vision Junior IT Support (needs driver's licence answer). None applied.
 - Base cover letter rewritten with accurate wording (CSO, Ticket Matcher under review).
 - Next: owner to confirm driver's licence; apply to further honest matches; upload resume to Indeed.
+
+## 2026-11-17 (night) - Overnight job applications (regional only)
+- Applied on SEEK: Service Desk Analyst (Brennan, Carrington); Junior IT Support Officer (Empowered Vision, Gateshead; licence answered Yes on owner's word, experience "Less than 1 year").
+- Skipped with reasons: Smith Family (external account), PRA (senior), TEKsystems and Stella (citizenship/clearance), Blueshift (needs owner's breakfast line and transcript), Maverick (2-4 yrs testing), PRP (healthcare admin), KPay (vehicle, 8 hrs/wk), GWG Data Quality (weak fit).
+- LinkedIn is signed in on the built-in browser only (Chrome shows authwall). Regional Easy Apply results were thin.
+- Next: owner to decide on Blueshift; upload resume to Indeed; Indeed job search not yet done.
