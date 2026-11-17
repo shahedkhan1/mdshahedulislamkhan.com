@@ -92,7 +92,8 @@
         "Decision layer recommends fix, escalate or gather more detail",
         "Trained on a decade of tickets, tested on unseen later ones"
       ],
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "product"
     },
     {
       "title": "Ticket Matcher in ZoomMate",
@@ -109,7 +110,8 @@
         "Chrome extension"
       ],
       "link": "",
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "product"
     },
     {
       "title": "Guarded Browser Assistant",
@@ -127,7 +129,8 @@
         "GitHub Actions"
       ],
       "link": "",
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "product"
     },
     {
       "title": "Phantom Signal",
@@ -144,7 +147,8 @@
         "Gemma 3 12B fine-tuned to generate targeted phishing emails",
         "Simulated emails bypassed email filtering and drew recipient engagement; delivered mitigation recommendations"
       ],
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "project"
     },
     {
       "title": "Rock Detection Pipeline",
@@ -161,7 +165,8 @@
         "OpenCV preprocessing for lighting variation",
         "End-to-end Python pipeline from image to detection"
       ],
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "project"
     },
     {
       "title": "Intelligent Library Assistant",
@@ -178,7 +183,8 @@
         "Fine-tuned gpt-oss-20b with prompt engineering",
         "Python implementation of the full chat flow"
       ],
-      "linkLabel": ""
+      "linkLabel": "",
+      "kind": "project"
     }
   ],
   "credentials": [

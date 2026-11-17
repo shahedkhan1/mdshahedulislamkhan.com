@@ -42,7 +42,7 @@ fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
        <ul class="hl">${(pr.highlights || []).map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
        ${pr.link ? `<span class="soon">${esc(pr.linkLabel)}</span>` : ""}
        <div class="stack">${pr.stack.map((s) => `<span class="tag">${esc(s)}</span>`).join("")}</div>`);
-    $("projectGrid").append(c);
+    (pr.kind === "product" ? $("productGrid") : $("projectGrid")).append(c);
   });
 
   Object.entries(d.skills).forEach(([k, v]) => $("skillList").append(el("div", "", `<h3>${esc(k)}</h3>${v.map((s) => `<span>${esc(s)}</span>`).join("")}`)));
