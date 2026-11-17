@@ -10,3 +10,8 @@
 - Done: backed up the live site and chatbot from cPanel; rewrote the chatbot from Python (cPanel) to a Pages Function; replaced the April site in this repo with the live site.
 - Decisions: Cloudflare Pages + Pages Function (cheapest that keeps the chatbot); Haiku 4.5 → Haiku 5.5 (10x cheaper).
 - Open: resume PDF (May 2026) is out of date and lists referee phone numbers publicly.
+
+## 2026-11-17 (chatbot fixed)
+- Chatbot on Cloudflare Pages now works (Haiku 5.5). Cause of the 401: the secret held the console key ID, not the sk-ant key. Re-saved the real key.
+- Removed the temporary key diagnostics from functions/api/chat.js.
+- Next: add the domain to Cloudflare (free), attach it to the Pages project, switch Namecheap nameservers, then delete the old legacy API key and set a monthly spend limit.
