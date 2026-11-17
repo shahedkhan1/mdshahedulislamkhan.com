@@ -97,9 +97,9 @@
       "status": "Delivered · used by the IT service desk"
     },
     {
-      "title": "Ticket Matcher in ZoomMate",
-      "tag": "AI agent · IT service desk",
-      "desc": "A Ticket Matcher agent in Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
+      "title": "Deskmate",
+      "tag": "AI agent · Service desk ticket helper powered by ZoomMate",
+      "desc": "A service desk ticket helper powered by Zoom's ZoomMate, so service desk officers get ticket guidance from their Zoom chat.",
       "highlights": [
         "Recommends the next action, the article to open and the team to escalate to",
         "Answers from a curated base of knowledge articles and resolved-ticket history; suggests only"

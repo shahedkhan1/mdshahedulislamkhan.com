@@ -35,4 +35,5 @@
 - Products now carry a "Delivered · used by ..." status chip (facts from owner: Ticket Matcher, ZoomMate agent and Guarded Browser Assistant used by the IT service desk; ZoomMate side panel used across DTS). Section titled "Delivered products".
 - Tagline changed to "AI security practitioner" (page title, meta, data.json headline, chatbot knowledge intro).
 - ZoomMate side panel split into its own product card (owner request); Products now: Ticket Matcher, Ticket Matcher in ZoomMate, ZoomMate Side Panel, Guarded Browser Assistant.
+- "Ticket Matcher in ZoomMate" renamed "Deskmate" (service desk ticket helper powered by ZoomMate), at owner request.
 - Next: owner reviews preview; then merge `redesign` to `main` (deploys live).
